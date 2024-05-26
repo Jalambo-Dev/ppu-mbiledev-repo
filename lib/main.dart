@@ -43,6 +43,7 @@ class MyApp extends StatelessWidget {
                   children: [
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         // Profile Image
                         const CircleAvatar(
@@ -54,9 +55,7 @@ class MyApp extends StatelessWidget {
                                 AssetImage('assets/christopher-campbell.jpg'),
                           ),
                         ),
-                        const SizedBox(
-                          width: 20,
-                        ),
+
                         // Name and Edit Icon
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -65,12 +64,13 @@ class MyApp extends StatelessWidget {
                               children: [
                                 // Name
                                 const Text(
-                                  'Christopher Campbell',
+                                  'Chriser Campbell',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20,
                                   ),
+                                  overflow: TextOverflow.ellipsis,
                                 ),
                                 // Edit Icon
                                 IconButton(
