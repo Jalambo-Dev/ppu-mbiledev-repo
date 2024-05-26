@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+// The entry point of the application
 void main() => runApp(const MyApp());
 
+// Main application widget
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -9,6 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        // Scaffold widget provides a basic material design layout structure
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.white,
@@ -27,6 +30,7 @@ class MyApp extends StatelessWidget {
           physics: const BouncingScrollPhysics(),
           padding: const EdgeInsets.symmetric(horizontal: 20),
           children: [
+            // Card widget for displaying profile information
             Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(25),
@@ -40,7 +44,7 @@ class MyApp extends StatelessWidget {
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        // Profile Images
+                        // Profile Image
                         const CircleAvatar(
                           radius: 40,
                           backgroundColor: Colors.white,
@@ -50,11 +54,10 @@ class MyApp extends StatelessWidget {
                                 AssetImage('assets/christopher-campbell.jpg'),
                           ),
                         ),
-
                         const SizedBox(
                           width: 20,
                         ),
-
+                        // Name and Edit Icon
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -69,7 +72,7 @@ class MyApp extends StatelessWidget {
                                     fontSize: 20,
                                   ),
                                 ),
-                                // icon
+                                // Edit Icon
                                 IconButton(
                                   onPressed: () {},
                                   icon: const Icon(
@@ -80,7 +83,6 @@ class MyApp extends StatelessWidget {
                                 ),
                               ],
                             ),
-
                             // Description
                             const Text(
                               'Artist',
@@ -97,14 +99,13 @@ class MyApp extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-
-                    // Catagories and numbers
+                    // Categories and Numbers
                     const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Column(
                           children: [
-                            // number
+                            // Number of Collections
                             Text(
                               '220',
                               style: TextStyle(
@@ -113,12 +114,10 @@ class MyApp extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-
                             SizedBox(
                               height: 10,
                             ),
-
-                            // catagories
+                            // Category
                             Text(
                               'Collect',
                               style: TextStyle(
@@ -131,7 +130,7 @@ class MyApp extends StatelessWidget {
                         ),
                         Column(
                           children: [
-                            // number
+                            // Number of Tracks
                             Text(
                               '20',
                               style: TextStyle(
@@ -140,12 +139,10 @@ class MyApp extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-
                             SizedBox(
                               height: 10,
                             ),
-
-                            // tite of number
+                            // Category
                             Text(
                               'Trak',
                               style: TextStyle(
@@ -158,7 +155,7 @@ class MyApp extends StatelessWidget {
                         ),
                         Column(
                           children: [
-                            // number
+                            // Number of Attentions
                             Text(
                               '51',
                               style: TextStyle(
@@ -167,12 +164,10 @@ class MyApp extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-
                             SizedBox(
                               height: 10,
                             ),
-
-                            // tite of number
+                            // Category
                             Text(
                               'Attention',
                               style: TextStyle(
@@ -185,7 +180,7 @@ class MyApp extends StatelessWidget {
                         ),
                         Column(
                           children: [
-                            // number
+                            // Number of Coupons
                             Text(
                               '907',
                               style: TextStyle(
@@ -194,12 +189,10 @@ class MyApp extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-
                             SizedBox(
                               height: 10,
                             ),
-
-                            // tite of number
+                            // Category
                             Text(
                               'Coupons',
                               style: TextStyle(
@@ -217,10 +210,11 @@ class MyApp extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 40),
+            // Row for displaying icons and text
             const Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                // items
+                // Wallet Item
                 Column(
                   children: [
                     CircleAvatar(
@@ -245,9 +239,9 @@ class MyApp extends StatelessWidget {
                     ),
                   ],
                 ),
+                // Delivery Item
                 Column(
                   children: [
-                    // item
                     CircleAvatar(
                       radius: 24,
                       backgroundColor: Color.fromARGB(255, 230, 230, 230),
@@ -270,9 +264,9 @@ class MyApp extends StatelessWidget {
                     ),
                   ],
                 ),
+                // Message Item
                 Column(
                   children: [
-                    // item
                     CircleAvatar(
                       radius: 24,
                       backgroundColor: Color.fromARGB(255, 230, 230, 230),
@@ -295,11 +289,11 @@ class MyApp extends StatelessWidget {
                     ),
                   ],
                 ),
+                // Service Item with Notification
                 Stack(
                   children: [
                     Column(
                       children: [
-                        // item
                         CircleAvatar(
                           radius: 24,
                           backgroundColor: Color.fromARGB(255, 230, 230, 230),
@@ -322,7 +316,7 @@ class MyApp extends StatelessWidget {
                         ),
                       ],
                     ),
-                    // notification number
+                    // Notification Badge
                     Positioned(
                       top: 0,
                       right: 0,
@@ -338,7 +332,7 @@ class MyApp extends StatelessWidget {
                           ),
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
               ],
@@ -346,6 +340,7 @@ class MyApp extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
+            // Card for Address Information
             Card(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25)),
@@ -390,6 +385,7 @@ class MyApp extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
+            // Card for Privacy Information
             Card(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25)),
@@ -415,7 +411,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
                 subtitle: const Text(
-                  'System premission change',
+                  'System permission change',
                   style: TextStyle(
                     color: Color.fromARGB(255, 180, 180, 180),
                     fontWeight: FontWeight.normal,
@@ -434,6 +430,7 @@ class MyApp extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
+            // Card for General Information
             Card(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25)),
@@ -478,6 +475,7 @@ class MyApp extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
+            // Card for Notification Information
             Card(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25)),
